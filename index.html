@@ -1,12 +1,92 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>DevOps Project</title>
-    </head>
-    <body>
-        <h1>Deployment is successful for examensarbete</h1>
-        <p>Deployed with Ansible 2026</p>
-        <p>This server lived in a Proxmox environment</p>
-        <p> mateooooooooooooooooooooooooooooooooooooooo is nice</p>
-    </body>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Examensarbete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #222;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #1f2937;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #374151;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .status {
+            background: #e5e7eb;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DevOps Examensarbete</h1>
+
+        <p>
+            Denna webbserver är deployad automatiskt som en del av mitt examensarbete inom DevOps.
+            Projektet körs i en lokal Proxmox-miljö och använder Ansible för automation.
+        </p>
+
+        <h2>Projektets mål</h2>
+        <p>
+            Målet är att visa hur en enkel webbapplikation kan deployas automatiskt med hjälp av
+            virtualisering, Infrastructure as Code och CI/CD.
+        </p>
+
+        <h2>Tekniker</h2>
+        <ul>
+            <li>Proxmox VE för virtualisering</li>
+            <li>Ubuntu Server som virtuell maskin</li>
+            <li>Ansible för konfiguration och deployment</li>
+            <li>GitHub Actions med self-hosted runner för CI/CD</li>
+            <li>Nginx som webbserver</li>
+            <li>Bash-script för teardown och cleanup av virtuella maskiner</li>
+        </ul>
+
+        <h2>Workflow</h2>
+        <p>
+            Kod pushas till GitHub, en pipeline startar automatiskt och Ansible kör playbooken
+            som installerar och uppdaterar webbservern.
+        </p>
+
+        <div class="status">
+            <strong>Status:</strong> Deployment successful with Ansible and GitHub Actions.
+        </div>
+
+        <footer>
+            Alexander Mobaraki · DEVOPS24 · 2026
+        </footer>
+    </div>
+</body>
 </html>
+
