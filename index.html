@@ -34,11 +34,25 @@
             line-height: 1.8;
         }
 
-        .status {
-            background: #e5e7eb;
-            padding: 15px;
+        .workflow-box {
+            background: #f9fafb;
+            border: 1px solid #d1d5db;
             border-radius: 6px;
-            margin-top: 20px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .workflow-step {
+            background: #e5e7eb;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 6px 0;
+        }
+
+        .arrow {
+            text-align: center;
+            font-weight: bold;
+            color: #555;
         }
 
         footer {
@@ -51,11 +65,13 @@
 <body>
     <div class="container">
         <h1>DevOps Examensarbete</h1>
-<!-- <h2>Live update for Mikael successful</h2> -->	
-	<p>
+
+        <!-- <h2>Live update for Mikael successful</h2> -->
+
+        <p>
             Denna webbserver är deployad automatiskt som en del av mitt examensarbete inom DevOps.
             Projektet körs i en lokal Proxmox-miljö och använder Ansible för automation.
-	</p>
+        </p>
 
         <h2>Projektets mål</h2>
         <p>
@@ -75,13 +91,24 @@
 
         <h2>Workflow</h2>
         <p>
-            Kod pushas till GitHub, en pipeline startar automatiskt och Ansible kör playbooken
-            som installerar och uppdaterar webbservern.
+            Nedan visas det enkla flödet för hur deployment fungerar i projektet.
         </p>
 
-        <div class="status">
-            <strong>Status:</strong> Deployment successful with Ansible and GitHub Actions.
+        <div class="workflow-box">
+            <div class="workflow-step">1. Kod ändras lokalt</div>
+            <div class="arrow">↓</div>
+            <div class="workflow-step">2. Push till GitHub</div>
+            <div class="arrow">↓</div>
+            <div class="workflow-step">3. GitHub Actions triggas</div>
+            <div class="arrow">↓</div>
+            <div class="workflow-step">4. Self-hosted runner kör workflow</div>
+            <div class="arrow">↓</div>
+            <div class="workflow-step">5. Ansible kör webserver.yaml</div>
+            <div class="arrow">↓</div>
+            <div class="workflow-step">6. Nginx och index.html uppdateras på VM</div>
         </div>
+
+        
 
         <footer>
             Alexander Mobaraki · DEVOPS24 · 2026
@@ -89,4 +116,3 @@
     </div>
 </body>
 </html>
-
